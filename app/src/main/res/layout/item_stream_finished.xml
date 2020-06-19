@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StreamContainer"
+    app:cardBackgroundColor="@color/athensGray"
+    app:cardCornerRadius="@dimen/stream_card__corner_radius"
+    app:cardElevation="@dimen/stream_card_elevation"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/stream_horizontal_guideline_end_position" />
+
+        <ImageView
+            android:id="@+id/streamImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/streamLogo"
+            style="@style/StreamLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/red"
+            tools:layout_height="23dp"
+            tools:layout_width="45dp" />
+
+        <include
+            android:id="@+id/emptyImageLayout"
+            layout="@layout/stream_empty_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black40"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/streamStateText"
+            style="@style/StreamState"
+            android:background="@color/mineShaft"
+            android:text="@string/finished"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/horizontalGuideline" />
+
+        <TextView
+            android:id="@+id/streamTitleText"
+            style="@style/StreamTitle"
+            android:textColor="@color/mineShaft50"
+            app:layout_constraintBottom_toTopOf="@id/streamDescriptionText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+            tools:text="Manchester United vs Manchester City" />
+
+        <TextView
+            android:id="@+id/streamDescriptionText"
+            style="@style/StreamDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/streamTitleText"
+            tools:text="Premiere League" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

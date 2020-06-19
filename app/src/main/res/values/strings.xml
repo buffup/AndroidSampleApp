@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Buff App</string>
+    <string name="enter_as_guest">Enter as guest</string>
+    <string name="game_on_nsports">Game On\nSports</string>
+    <string name="buff">Buff</string>
+    <string name="sport">Sport</string>
+    <string name="participate_on_this_live_events">Participate on this live events</string>
+    <string name="streams">Streams</string>
+    <string name="no_streams_yet">No Streams\nYet…</string>
+    <string name="live_now">Live now</string>
+    <string name="data_error">Something went wrong…</string>
+    <string name="sports_gaming_live">Sports\nGaming\nLive</string>
+    <string name="finished">Finished</string>
+    <string name="tomorrow">tomorrow</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".ui.videoactivity.VideoActivity">
+
+    <com.buffup.sdk.ui.BuffView
+        android:id="@+id/buffView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:buffsDisplayType="cards"
+        app:buffsVisibility="left"
+        app:stateVisibility="true">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:resize_mode="zoom"
+            app:use_controller="false" />
+
+    </com.buffup.sdk.ui.BuffView>
+
+</FrameLayout>
