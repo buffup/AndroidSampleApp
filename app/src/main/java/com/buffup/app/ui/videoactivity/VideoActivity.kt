@@ -3,7 +3,6 @@ package com.buffup.app.ui.videoactivity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.buffup.app.R
 import com.buffup.app.utils.Constants.STREAM_ID
@@ -13,6 +12,7 @@ import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.ExoPlayerFactory
 import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory
 import com.google.android.exoplayer2.source.ExtractorMediaSource
+import com.google.android.exoplayer2.ui.PlayerView
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.util.Util
 import kotlinx.android.synthetic.main.activity_video.*
@@ -77,8 +77,8 @@ class VideoActivity : AppCompatActivity(), KoinComponent, PositionListener {
         )
         player.prepare(mediaSource)
         playerView.keepScreenOn = true
-
         playerView.player = player
+        playerView.setShowBuffering(PlayerView.SHOW_BUFFERING_WHEN_PLAYING)
 
         videoProgressTracker = ProgressTracker(player, this)
     }
